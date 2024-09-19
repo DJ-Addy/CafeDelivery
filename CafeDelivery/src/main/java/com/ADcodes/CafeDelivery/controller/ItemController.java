@@ -18,20 +18,20 @@ import com.ADcodes.CafeDelivery.repo.ItemRepo;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
-@RequestMapping("/item")
+@RequestMapping("/items")
 public class ItemController {
 
     @Autowired
     private ItemRepo itemRepo;
 
     // Add new item
-    @PostMapping
+    @PostMapping("/items")
     public Items addItem(@RequestBody Items newItem) {
         return itemRepo.save(newItem);
     }
 
     // Update existing item
-    @PutMapping("/{id}")
+    @PutMapping("/items/{id}")
     public Items updateItem(@RequestBody Items updatedItem, @PathVariable Integer id) {
         return itemRepo.findById(id)
                 .map(item -> {
@@ -50,19 +50,19 @@ public class ItemController {
     }
 
     // View all items
-    @GetMapping
+    @GetMapping("/items")
     public List<Items> getAllItems() {
         return itemRepo.findAll();
     }
 
     // Get item by id
-    @GetMapping("/{id}")
+    @GetMapping("/items/{id}")
     public Optional<Items> getItemById(@PathVariable Integer id) {
         return itemRepo.findById(id);
     }
 
     // Remove item by id
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/items/{id}")
     public void removeItem(@PathVariable Integer id) {
         itemRepo.deleteById(id);
     }
