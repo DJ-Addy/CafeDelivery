@@ -3,8 +3,6 @@ package com.ADcodes.CafeDelivery.controller;
 
 import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,15 +24,9 @@ public class ItemController {
 
     // Add new item
    @PostMapping("/items")
-    public ResponseEntity<Items> addItem(@RequestBody Items newItem) {
-        try {
-            Items savedItem = itemRepo.save(newItem);
-            return ResponseEntity.ok(savedItem);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
-    }
+   public Items addItem(@RequestBody Items newItem) {
+    return itemRepo.save(newItem);
+    }   
 
     // Update existing item
     @PutMapping("/items/{id}")
@@ -42,7 +34,7 @@ public class ItemController {
         return itemRepo.findById(id)
                 .map(item -> {
                     item.setItemName(updatedItem.getItemName());
-                    item.setItemCat(updatedItem.getItemCat());
+                    item.setItemCate(updatedItem.getItemCate());
                     item.setItemSize(updatedItem.getItemSize());
                     item.setItemPrice(updatedItem.getItemPrice());
                     item.setItemDescription(updatedItem.getItemDescription());

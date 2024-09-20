@@ -53,14 +53,6 @@ public class Items {
 		this.itemName = itemName;
 	}
 
-	public String getItemCat() {
-		return itemCate;
-	}
-
-	public void setItemCat(String itemCate) {
-		this.itemCate = itemCate;
-	}
-
 	public String getItemSize() {
 		return itemSize;
 	}
@@ -99,6 +91,14 @@ public class Items {
 
 	public void setItemNotes(String itemNotes) {
 		this.itemNotes = itemNotes;
+	}
+
+	public String getItemCate() {
+		return itemCate;
+	}
+
+	public void setItemCate(String itemCate) {
+		this.itemCate = itemCate;
 	}
 
     
