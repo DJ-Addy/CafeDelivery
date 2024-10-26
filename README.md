@@ -63,7 +63,7 @@ A full-stack web application for cafe food delivery, built using **Spring Boot**
 ## Project Screenshots
 
 ### Homepage
-![Homepage](C:\Users\Adam\Desktop\Screenshot 2024-10-26 151408.png)
+![HomePage](https://github.com/user-attachments/assets/b881901f-c3ff-49cb-8525-2de5e9c88ecc)
 
 ### Order Summary
 ![Order Summary](path/to/order-summary.jpg)
