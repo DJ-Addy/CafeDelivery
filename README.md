@@ -2,7 +2,8 @@
 
 A full-stack web application for cafe food delivery, built using **Spring Boot** for backend APIs, **React** for frontend UI, and **SQL** for data management. The application provides modules for both **Admin** and **Supplier** roles to manage inventory, orders, and customer interactions effectively.
 
-![Banner](CafeDelivery/src/main/resources/static/Screenshot 2024-10-26 151408.png)
+![Cafe Database schema](https://github.com/user-attachments/assets/10efe082-07c5-41f7-a27a-ae31d6b9820d)
+
 
 ## Features
 - **Customer Module**: Browse food items, place orders, track delivery, and view order history.
